@@ -2,6 +2,12 @@ import time
 import random
 import sys
 from rich.console import Console
+from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, TimeElapsedColumn
+from rich.panel import Panel
+from rich.text import Text
+from rich.live import Live
+from rich.table import Table
+from rich.tree import Tree
 
 console = Console()
 
@@ -153,3 +159,23 @@ def finalize():
     time.sleep(1)
     console.print("[dim]Session closed.[/]")
 
+if __name__ == "__main__":
+    console.clear()
+    time.sleep(0.5)
+    
+    simulate_kernel_boot()
+    time.sleep(0.5)
+    
+    authenticate()
+    time.sleep(0.5)
+    
+    connect_ai_models()
+    time.sleep(0.5)
+    
+    execute_payload()
+    time.sleep(0.5)
+    
+    project_milkywaygalaxy()
+    time.sleep(0.5)
+    
+    finalize()
